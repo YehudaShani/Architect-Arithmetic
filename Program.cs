@@ -19,9 +19,19 @@ namespace ArchitectArithmetic
 
       public static void Main(string[] args)
         {
-            Console.WriteLine(Rect(5, 6));
-            Console.WriteLine(Circle(4));
-            Console.WriteLine(Triangle(10, 5));
+            // Calculating the area of the Teotihuacan
+            double teoRect = Rect(2500, 1500);  
+            double teoCircle = Circle(375) / 2;
+            double teoTriangle = Triangle(750, 500);
+            double teoArea = teoRect + teoCircle + teoTriangle;
+            double teoCost = teoArea * 180;
+            // round the area to two decimal places
+            teoArea = Math.Round(teoArea, 2);
+            // round the cost to two decimal places
+            teoCost = Math.Round(teoCost, 2);
+            Console.WriteLine($"The area of the Teotihuacan is {teoArea} m^2");
+            Console.WriteLine($"The cost of the Teotihuacan is {teoCost} pesos");
+
         }
     }
 }
